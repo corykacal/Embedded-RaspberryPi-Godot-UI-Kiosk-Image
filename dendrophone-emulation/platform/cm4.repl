@@ -1,0 +1,19 @@
+using "platforms/cpus/cortex-a72.repl"
+
+cpu: CPU.ARMv8A @ sysbus
+    cpuType: "cortex-a72"
+    genericInterruptController: gic
+
+gic: IRQControllers.ARM_GenericInterruptController @ {
+    sysbus 0x1000000;
+    sysbus 0x2000000
+}
+
+uart0: UART.PL011 @ sysbus 0x3F201000
+    -> gic@57
+
+gpio: GPIO.RPi4GPIOController @ sysbus 0x3F200000
+
+gpu: Video.VideoCore @ sysbus 0x3F400000
+    width: 1920
+    height: 1080

@@ -3,15 +3,6 @@ set -e
 
 echo "Checking if buildroot needs initial setup..."
 
-# Clean buildroot if needed
-if [ -f buildroot/.config ]; then
-    cd buildroot
-    rm .config
-    make clean
-    make distclean
-    cd ..
-fi
-
 # Build buildroot
 if [ ! -f buildroot/output/host/bin/aarch64-linux-g++ ]; then
     echo "Setting up buildroot..."

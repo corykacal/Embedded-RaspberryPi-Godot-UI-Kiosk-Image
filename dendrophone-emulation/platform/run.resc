@@ -1,0 +1,14 @@
+:name: cm4-kiosk
+using sysbus
+mach create
+machine LoadPlatformDescription @platform/cm4.repl
+
+$bin = @build/kiosk.elf
+
+sysbus LoadELF $bin
+
+# Setup UART
+showAnalyzer uart0
+
+# Start simulation
+start

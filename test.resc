@@ -1,4 +1,0 @@
-mach create
-machine LoadPlatformDescription @platforms/cpus/bcm2711.repl
-sysbus LoadELF "program"
-start

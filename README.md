@@ -37,7 +37,7 @@ cd dendrophone
 git submodule update --init
 
 # Build system
-./scripts/build.sh
+./scripts/build_image.sh
 ```
 
 ###Simulation
