@@ -1,14 +1,14 @@
-:name: cm4-kiosk
+:name: cm4-dendrophone
 using sysbus
 mach create
-machine LoadPlatformDescription @platform/cm4.repl
+machine LoadPlatformDescription @dendrophone-emulation/platform/cm4.repl
 
-$bin = @build/kiosk.elf
+
+$bin = @build/program
 
 sysbus LoadELF $bin
 
-# Setup UART
-showAnalyzer uart0
+showAnalyzer uart1
 
 # Start simulation
 start

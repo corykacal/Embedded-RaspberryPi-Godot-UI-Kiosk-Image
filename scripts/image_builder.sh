@@ -7,7 +7,7 @@ echo "Checking if buildroot needs initial setup..."
 if [ ! -f buildroot/output/host/bin/aarch64-linux-g++ ]; then
     echo "Setting up buildroot..."
     # Copy our config
-    cp dendrophone-board/configs/cm4_defconfig buildroot/configs/
+    cp dendrophone-image/configs/cm4_defconfig buildroot/configs/
     cd buildroot
     make cm4_defconfig
     make sdk
@@ -30,7 +30,7 @@ cd ../..
 echo "Copying to buildroot overlay..."
 
 # Copy to buildroot overlay
-cp src/build/dendrophone_app dendrophone-board/overlay/usr/bin/
+cp src/build/program dendrophone-image/overlay/usr/bin/
 
 echo "Building system image..."
 cd buildroot
