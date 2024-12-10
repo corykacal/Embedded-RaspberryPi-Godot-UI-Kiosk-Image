@@ -13,7 +13,7 @@ case "$1" in
     export XDG_RUNTIME_DIR=/tmp/runtime-root
 
     # Launch cage in foreground
-    /usr/bin/cage -- /bin/Dendrophone.arm64
+    /usr/bin/cage -- /bin/godot_app
     ;;
 
   stop)
