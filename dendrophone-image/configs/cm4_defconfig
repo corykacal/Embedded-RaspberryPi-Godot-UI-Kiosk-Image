@@ -39,7 +39,7 @@ BR2_INIT_SYSTEMD=n
 # Boot and firmware
 BR2_PACKAGE_RPI_FIRMWARE_X=y
 BR2_PACKAGE_RPI_FIRMWARE_BOOT_CMDLINE="quiet console=null logo.nologo vt.global_cursor_default=0 fastboot noatime nodiratime panic=0"
-BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="../dendrophone-image/configs/linux-drm.config ../dendrophone-image/configs/linux-usb.config ../dendrophone-image/configs/linux-spi.config ../dendrophone-image/configs/linux-silent.config"
+BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="../dendrophone-image/fragments/linux-drm.config ../dendrophone-image/fragments/linux-usb.config ../dendrophone-image/fragments/linux-spi.config ../dendrophone-image/fragments/linux-silent.config"
 BR2_ROOTFS_OVERLAY="../dendrophone-image/overlay"
 BR2_TARGET_GENERIC_SILENT_CONSOLE=y
 
