@@ -2,6 +2,12 @@
 
 This build system creates a minimal Linux image designed to run a Godot 4 application in kiosk mode on a Raspberry Pi CM4. The system boots directly into your Godot application using the Cage Wayland compositor and Vulkan 1.2.
 
+I have found Godot to be a solid UI for Embedded Linux applications. This is due to the fact its compiled for the native system (over something like ReactJS/electron) and has a minimal foot print for how powerful it is. The GDExtension feature of Godot is also extremely helpful, as you can call native C++ code and libraries like GPIO pins.
+
+## Using this for other Linux boards
+
+You can use this with any other Linux board that supports Vulkan 1.2. Just change the defconfig. Whatever defconfig you use, make sure to copy over the stuff that was added for this intended kiosk functionality. 
+
 ## Technical Requirements
 
 - Godot 4.x application compiled for ARM64 and Vulkan 1.2
