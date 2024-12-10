@@ -1,14 +1,11 @@
 # Dendrophone Buildroot Image
 
-A musical instrument based on Raspberry Pi CM4.
+A musical instrument based on Raspberry Pi Compute Module (4).
 
 ## Hardware Requirements
 - Raspberry Pi Compute Module 4 (2GB RAM)
-- Waveshare 3.5" IPS LCD (480x320)
-- MCP3002 ADC
-- Cherry MX switches (x4)
-- Analog joystick
-- Various resistors and capacitors
+- Any DSI MIPI screen?
+- Other BOM being figured out. Will use encoders and ADC.
 
 ## Directory Structure
 - `src/` - Application source code
