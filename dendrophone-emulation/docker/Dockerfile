@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y \
     libgpiod-dev \
     libgbm-dev \
     libdrm-dev \
-    pkg-config
+    pkg-config \
+    linux-headers-generic

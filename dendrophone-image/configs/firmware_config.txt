@@ -30,13 +30,16 @@ dtoverlay=dwc2,dr_mode=host
 # enable 64bits support
 arm_64bit=1
 
-# Enable USB
-dtoverlay=dwc2,dr_mode=host
-
-# USB power limits for RPi4 ports
-max_usb_current=1
-usb_max_current_enable=1
-
 # Enable DRM VC4 V3D driver with full KMS
-disable_overscan=1
 dtoverlay=vc4-kms-v3d
+
+dtparam=spi=on
+
+# Disable the PWR LED
+dtparam=pwr_led_trigger=none
+dtparam=pwr_led_activelow=off
+
+# Disable rainbow splash and warnings
+disable_splash=1
+avoid_warnings=1
+disable_overscan=1

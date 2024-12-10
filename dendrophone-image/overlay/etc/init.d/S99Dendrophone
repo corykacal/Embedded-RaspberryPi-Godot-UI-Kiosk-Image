@@ -1,0 +1,31 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    # Wait for DRM to be ready
+    while [ ! -e /dev/dri/card0 ]; do sleep 1; done
+
+    # Setup runtime directory
+    mkdir -p /tmp/runtime-root
+    chmod 700 /tmp/runtime-root
+
+    # Export required variables
+    export XDG_RUNTIME_DIR=/tmp/runtime-root
+
+    # Launch cage in foreground
+    /usr/bin/cage -- /bin/Dendrophone.arm64
+    ;;
+
+  stop)
+    killall cage
+    ;;
+
+  restart)
+    $0 stop
+    $0 start
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|restart}"
+    exit 1
+esac

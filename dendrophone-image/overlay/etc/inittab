@@ -17,7 +17,9 @@ si9::sysinit:/bin/ln -sf /proc/self/fd/2 /dev/stderr 2>/dev/null
 si10::sysinit:/bin/hostname -F /etc/hostname
 rcS:12345:wait:/etc/init.d/rcS
 
-1:2345:respawn:/usr/bin/kmscube
+#sole::respawn:/sbin/getty -L  console 0 vt100 # GENERIC_SERIAL
+#tty1::respawn:/sbin/getty -L  tty1 0 vt100 # HDMI console
+1:12345:respawn:/etc/init.d/S99Dendrophone start
 
 # Stuff to do for the 3-finger salute
 #ca::ctrlaltdel:/sbin/reboot
