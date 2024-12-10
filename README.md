@@ -1,4 +1,4 @@
-# Dendrophone
+# Dendrophone Buildroot Image
 
 A musical instrument based on Raspberry Pi CM4.
 
