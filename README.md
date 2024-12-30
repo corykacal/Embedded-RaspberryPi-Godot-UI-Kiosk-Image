@@ -110,5 +110,5 @@ This will include the bootable SD card image for your Raspberry Pi CM4.
  - If your Godot application fails to start:
    - Verify your application is compiled for ARM64
    - Ensure Vulkan 1.2 compatibility
-   - Check the system logs for graphics driver issues
+   - Check the system logs and dmesg for graphics driver issues
 
