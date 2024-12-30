@@ -1,3 +1,10 @@
+<div style="display: flex; justify-content: space-between; background-color: beige; padding: 20px;">
+    <img src="https://github.com/user-attachments/assets/70a1c1eb-321f-44a2-9bbf-ecacad254130" width="12%" />
+    <img src="https://github.com/user-attachments/assets/fbf31f78-1f1a-458f-ac04-5e6e024ba1e8" width="32%" />
+    <img src="https://github.com/user-attachments/assets/5fc79fc8-d34e-4be4-8c49-53b10149cb85" width="32%" />
+</div>
+
+
 # Buildroot Godot Kiosk Build System for Raspberry Pi (4)
 
 This build system creates a minimal Linux image designed to run a Godot 4 application in kiosk mode on a Raspberry Pi CM4. The system boots directly into your Godot application using the Cage Wayland compositor and Vulkan 1.2.
@@ -6,7 +13,7 @@ I have found Godot to be a solid UI for Embedded Linux applications. This is due
 
 ## Using this for other Linux boards
 
-You can use this with any other Linux board that supports Vulkan 1.2. Just change the defconfig. Whatever defconfig you use, make sure to copy over the stuff that was added for this intended kiosk functionality. 
+You can use this with any other Linux board that supports Vulkan 1.2. Just change the defconfig. Whatever defconfig you use, make sure to copy over the stuff that was added for this intended kiosk functionality as specified by comments in the configs. 
 
 ## Technical Requirements
 
@@ -15,7 +22,7 @@ You can use this with any other Linux board that supports Vulkan 1.2. Just chang
 - Git
 - Basic bash environment
 
-## Setup Steps
+## Quick Setup Steps
 
 1. Clone the repository
    ```bash
