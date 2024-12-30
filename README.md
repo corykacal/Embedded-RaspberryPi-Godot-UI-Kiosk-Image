@@ -26,7 +26,7 @@ You can use this with any other Linux board that supports Vulkan 1.2. Just chang
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/corykacal/RaspberryPi-Godot-UI-Kiosk-Image godot-kiosk
+   git clone https://github.com/corykacal/Embedded-RaspberryPi-Godot-UI-Kiosk-Image godot-kiosk
    cd godot-kiosk
    ```
 
